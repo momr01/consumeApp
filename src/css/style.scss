@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+
+@tailwind base;
+@tailwind components;
+
+// Additional styles
+@import 'additional-styles/utility-patterns.scss';
+@import 'additional-styles/range-slider.scss';
+@import 'additional-styles/toggle-switch.scss';
+@import 'additional-styles/flatpickr.scss';
+@import 'additional-styles/theme.scss';
+
+@tailwind utilities;
+
+@layer base {
+    // * {
+    //     color: black;
+    // }
+
+    .instructions {
+        font-size: 0.75rem;
+        border-radius: 0.5rem;
+        background: #000;
+        color: #fff;
+        padding: 0.25rem;
+        position: relative;
+        bottom: -10px;
+    }
+
+
+    .offscreen {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .errmsg {
+        background-color: lightpink;
+        color: firebrick;
+        font-weight: bold;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #009B4A;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
